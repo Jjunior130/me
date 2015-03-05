@@ -3,4 +3,4 @@
         [ring.adapter.jetty :as jetty]))
 
 (defn -main [port]
-  (jetty/run-jetty app {:port (Integer. port)}))
+  (jetty/run-jetty app {:port (if port (Integer. port) 8000)}))
